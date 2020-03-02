@@ -33,17 +33,16 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-dark" id="front">
-        <div id="cookies">
-            <span>
-                <b>En continuant de défiler</b>, vous acceptez l'utilisation de services tiers pouvant installer des
-                cookies
-            </span>
-            <a class="accepter" href="#" onclick="masquerBandeauCookies()"> ✓ Ok, tout accepter</a>
-            <!---TARGET SERT A OUVRIR LA CIBLE D'UN LIEN DANS UNE NOUVELLE PAGE-->
-            <a class="savoirPlus" href="https://www.google.fr" target="_blank">En savoir plus</a>
+    <div id="cookie-bar">
+        <div class="cookie">
+            Ce site web utlilise des cookies pour personnaliser le contenu et pour analyser notre trafic. 
+            En utilisant ce site, vous acceptez notre utilisation des cookies. 
+            Vous pouvez refusez 
+            <button id='nocookie' class="bg-danger">en cliquant ici</button>
+            Si ce n'est pas le cas, cliquez ici : 
+            <button id="cookieok" class="bg-danger">J'accepte</button>
         </div>
-
+    </div>		
 
 
 
@@ -53,6 +52,7 @@
                 <form class="form-inline" action="/action_page.php">
                     <input class="form-control mr-sm-2" type="text" placeholder="Rechercher">
                     <button class="btn btn-success" type="submit">Rechercher</button>
+                    
 
                 </form>
             </div>
@@ -181,12 +181,16 @@
             </div>
         </div>
     </div>
+     
 
-    <div class="container-fluid bg-secondary">
+    <div class="container-fluid bg-danger">
         <header class="container">
+            <img class="turn" src="Public/Images/logos/assiettelogo.png"> 
             <figure class="logo">
-                <img src="Public/Images/logos/les-fins-gourmets2.jpg" alt="les-fins-gourmets">
+                <img src="Public/Images/logos/logofg.png" alt="les-fins-gourmets">
+                <h1>Les Fins Gourmets</h1>
             </figure>
+            
 
             <!------MENU PRINCIPAL------>
 
@@ -203,7 +207,7 @@
                 <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
                     <ul class="navbar-nav">
 
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a class="nav-link text-white" href="index.html">Accueil</a>
                         </li>
 
@@ -368,7 +372,7 @@
         </div>
     </main>
     <!-----------FOOTER--------------->
-    <div class="container-fluid bg-secondary">
+    <div class="container-fluid bg-danger">
         <footer class="pied">
 
             <div class="row">
@@ -476,10 +480,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+    <script type="text/javascript" src="Public/JS/searchbar.js"></script>
     <script type="text/javascript" src="Public/JS/apigeo.js"></script>
     <script type="text/javascript" src="Public/JS/cookie.js"></script>
     <script type="text/javascript" src="Public/JS/modal.js"></script>
     <script type="text/javascript" src="Public/JS/active.js"></script>
+   
 
     <script type="text/javascript">
         menuActive(0);
